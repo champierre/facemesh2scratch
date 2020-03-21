@@ -17,19 +17,7 @@ It uses facemesh package provided by MediaPipe and TensorFlow.js. If you want to
 
 https://github.com/champierre/facemesh2scratch/raw/master/sample_projects/facemesh.sb3
 
-<img src="images/en/sample_project_4.png" />
-
-### Ball script
-
-<img src="images/en/sample_project_1.png" />
-
-### Ball 2 script
-
-<img src="images/en/sample_project_2.png" />
-
-### Stage script
-
-<img src="images/en/sample_project_3.png" />
+<img src="images/en/sample_project.png" />
 
 ## Licence
 
