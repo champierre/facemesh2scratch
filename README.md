@@ -6,7 +6,14 @@ It uses facemesh package provided by MediaPipe and TensorFlow.js. If you want to
 
 ## Demo Movie
 
+### Single face
+
   <img src="images/facemesh.gif" width="600" />
+
+### Multiple faces
+
+  <img src="images/facemesh_multiple_faces.gif" width="600" />
+
 
 ## How to use
 
