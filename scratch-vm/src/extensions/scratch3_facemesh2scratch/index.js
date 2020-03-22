@@ -52,6 +52,11 @@ const Message = {
     'ja-Hira': 'さゆうはんてん',
     'en': 'on flipped',
   },
+  please_wait: {
+    'ja': '準備に時間がかかります。少しの間、操作ができなくなりますがお待ち下さい。',
+    'ja-Hira': 'じゅんびにじかんがかかります。すこしのあいだ、そうさができなくなりますがおまちください。',
+    'en': 'Setup takes a while. The browser will get stuck, but please wait.'
+  }
 }
 const AvailableLocales = ['en', 'ja', 'ja-Hira'];
 
@@ -150,7 +155,7 @@ class Scratch3Facemesh2ScratchBlocks {
         this.interval = 200;
 
         this.video.addEventListener('loadeddata', (event) => {
-          alert('During loading Facemesh model the browser gets stuck, but please wait for a while.')
+          alert(Message.please_wait[this._locale]);
           facemesh.load().then(model => {
             this.model = model;
             this.timer = setInterval(() => {
