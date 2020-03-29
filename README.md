@@ -14,7 +14,6 @@ It uses facemesh package provided by MediaPipe and TensorFlow.js. If you want to
 
   <img src="images/facemesh_multiple_faces.gif" width="600" />
 
-
 ## How to use
 
 - Open https://champierre.github.io/scratch3/ on Chrome.
@@ -32,7 +31,8 @@ https://github.com/champierre/facemesh2scratch/raw/master/sample_projects/faceme
 
 ## Examples of use
 
-- Coming soon...
+- [Control an object by face direction](https://twitter.com/y0sh1k10/status/1244241128074797057)
+- [Blow a balloon](https://twitter.com/kuroyanagi_css/status/1241510719834558467)
 
 ## Requirements
 
