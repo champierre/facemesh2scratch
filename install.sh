@@ -10,6 +10,7 @@ EXTENSION_DESCRIPTION="Face Tracking"
 cd node_modules/scratch-vm
 npm install @tensorflow/tfjs-core
 npm install @tensorflow/tfjs-converter
+npm install @tensorflow/tfjs-backend-webgl
 npm install @tensorflow-models/facemesh
 cd ../../
 

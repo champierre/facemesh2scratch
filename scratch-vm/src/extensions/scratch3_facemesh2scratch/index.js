@@ -2,8 +2,9 @@ const ArgumentType = require('../../extension-support/argument-type');
 const BlockType = require('../../extension-support/block-type');
 const Cast = require('../../util/cast');
 const formatMessage = require('format-message');
-const tf = require('@tensorflow/tfjs-core');
-const tfconv = require('@tensorflow/tfjs-converter');
+require('@tensorflow/tfjs-core');
+require('@tensorflow/tfjs-converter');
+require('@tensorflow/tfjs-backend-webgl');
 const facemesh = require('@tensorflow-models/facemesh');
 
 const Message = {
