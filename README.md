@@ -25,7 +25,7 @@ MediaPipeとTensorFlow.jsが提供するfacemeshパッケージを利用して�
 
 https://github.com/champierre/facemesh2scratch/raw/master/sample_projects/facemesh.sb3
 
-<img src="images/ja/sample_project.png" />
+<img src="images/en/sample_project.png" />
 
 ## ライセンス
 
@@ -51,7 +51,7 @@ Chrome の拡張機能を使用している場合に、正常に動作しない�
 
 - Q. Facemesh2Scratch拡張機能が正常に動作しません。
 
-- A. Chromeのデベロッパーツールを開き、Consoleタブを確認してください。「Error: WebGL is not supported on this device」というエラーが表示されている場合、[ChromeでWebGLが使えない場合の対処方法](https://masshiro.blog/webgl-chrome/)にある対処方法を試みてください。Chromeの「設定」画面より「詳細設定」を選び、「ハードウェア アクセラレーションが使用可能な場合は使用する」が無効になっている場合は、有効にしてChromeを再起動してみてください。 
+- A. Chromeのデベロッパーツールを開き、Consoleタブを確認してください。「Error: WebGL is not supported on this device」というエラーが表示されている場合、[ChromeでWebGLが使えない場合の対処方法](https://masshiro.blog/webgl-chrome/)にある対処方法を試みてください。Chromeの「設定」画面より「詳細設定」を選び、「ハードウェア アクセラレーションが使用可能な場合は使用する」が無効になっている場合は、有効にしてChromeを再起動してみてください。
 
 ## 開発社向け(For Developers - How to run Facemesh2Scratch extension on your computer)
 
