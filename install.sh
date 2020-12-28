@@ -8,10 +8,7 @@ COLLABORATOR=champierre
 EXTENSION_DESCRIPTION="Face Tracking"
 
 cd node_modules/scratch-vm
-npm install @tensorflow/tfjs-core
-npm install @tensorflow/tfjs-converter
-npm install @tensorflow/tfjs-backend-webgl
-npm install @tensorflow-models/facemesh
+npm install ml5 
 cd ../../
 
 mkdir -p node_modules/scratch-vm/src/extensions/scratch3_${EXTENSION_ID}
