@@ -2,10 +2,7 @@ const ArgumentType = require('../../extension-support/argument-type');
 const BlockType = require('../../extension-support/block-type');
 const Cast = require('../../util/cast');
 const formatMessage = require('format-message');
-require('@tensorflow/tfjs-core');
-require('@tensorflow/tfjs-converter');
-require('@tensorflow/tfjs-backend-webgl');
-const facemesh = require('@tensorflow-models/facemesh');
+const ml5 = require('ml5');
 
 const Message = {
   getX: {
@@ -153,21 +150,20 @@ class Scratch3Facemesh2ScratchBlocks {
         video.style.display = "none";
         this.video = video;
         this.ratio = 0.75;
-        this.interval = 200;
 
         this.video.addEventListener('loadeddata', (event) => {
           alert(Message.please_wait[this._locale]);
-          facemesh.load().then(model => {
-            this.model = model;
-            this.timer = setInterval(() => {
-              this.model.estimateFaces(this.video).then(faces => {
-                if (faces.length < this.faces.length) {
-                  this.faces.splice(faces.length);
-                }
-                faces.forEach((face, index) => {
-                  this.faces[index] = {keypoints: face.scaledMesh};
-                });
-              }, this.interval);
+
+          const facemesh = ml5.facemesh(this.video, function() {
+            console.log("Model loaded!")
+          });
+
+          facemesh.on('predict', faces => {
+            if (faces.length < this.faces.length) {
+              this.faces.splice(faces.length);
+            }
+            faces.forEach((face, index) => {
+              this.faces[index] = {keypoints: face.scaledMesh};
             });
           });
         });
@@ -253,18 +249,6 @@ class Scratch3Facemesh2ScratchBlocks {
                             defaultValue: '0.75'
                         }
                     }
-                },
-                {
-                    opcode: 'setInterval',
-                    blockType: BlockType.COMMAND,
-                    text: Message.setInterval[this._locale],
-                    arguments: {
-                        INTERVAL: {
-                            type: ArgumentType.STRING,
-                            menu: 'intervalMenu',
-                            defaultValue: '0.2'
-                        }
-                    }
                 }
             ],
             menus: {
@@ -334,35 +318,6 @@ class Scratch3Facemesh2ScratchBlocks {
 
     setRatio (args) {
       this.ratio = parseFloat(args.RATIO);
-    }
-
-    setInterval (args) {
-      if (this.timer) {
-        clearTimeout(this.timer);
-      }
-
-      this.interval = args.INTERVAL * 1000;
-      this.timer = setInterval(() => {
-        this.model.estimateFaces(this.video).then(faces => {
-          if (faces.length < this.faces.length) {
-            this.faces.splice(faces.length);
-          }
-          faces.forEach((face, index) => {
-            this.faces[index] = {keypoints: face.scaledMesh};
-          });
-        }, this.interval);
-      });
-    }
-
-    setKeypoints() {
-
-        this.faces = [];
-        this.model.estimateFaces(this.video).then(faces => {
-          faces.forEach((face, index) => {
-            this.faces[index] = {keypoints: face.scaledMesh};
-          });
-        });
-
     }
 
     setLocale() {
