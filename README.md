@@ -18,7 +18,7 @@ MediaPipeとTensorFlow.jsが提供するfacemeshパッケージを利用して�
 
 ## 使用方法
 
-- Chromeで https://stretch3.github.io/ を開きます。
+- Chromeで https://stretch3.github.io/ (ほかのオリジナル拡張機能が使用できます)または https://champierre.github.io/facemesh2scratch/ を開きます。
 - 拡張機能一覧よりFacemesh2Scratchを選びます。
 
 ## サンプルプロジェクト
