@@ -142,23 +142,21 @@ class Scratch3Facemesh2ScratchBlocks {
         this.runtime = runtime;
 
         this.faces = [];
-
-        let video = document.createElement("video");
-        video.width = 480;
-        video.height = 360;
-        video.autoplay = true;
-        video.style.display = "none";
-        this.video = video;
         this.ratio = 0.75;
 
-        this.video.addEventListener('loadeddata', (event) => {
+        this.detectFace = () => {
+          // We should reuse the video element created by videoProvider instead of creating a new video element
+          // This is because iOS or iPad does not allow camera attached to two video elements
+          this.video = this.runtime.ioDevices.video.provider.video
+
           alert(Message.please_wait[this._locale]);
 
-          const facemesh = ml5.facemesh(this.video, function() {
+
+          this.facemesh = ml5.facemesh(this.video, function() {
             console.log("Model loaded!")
           });
 
-          facemesh.on('predict', faces => {
+          this.facemesh.on('predict', faces => {
             if (faces.length < this.faces.length) {
               this.faces.splice(faces.length);
             }
@@ -166,18 +164,9 @@ class Scratch3Facemesh2ScratchBlocks {
               this.faces[index] = {keypoints: face.scaledMesh};
             });
           });
-        });
+        }        
 
-        let media = navigator.mediaDevices.getUserMedia({
-          video: true,
-          audio: false
-        });
-
-        media.then((stream) => {
-            this.video.srcObject = stream;
-        });
-
-        this.runtime.ioDevices.video.enableVideo();
+        this.runtime.ioDevices.video.enableVideo().then( this.detectFace)
     }
 
     getInfo () {
@@ -310,8 +299,9 @@ class Scratch3Facemesh2ScratchBlocks {
       let state = args.VIDEO_STATE;
       if (state === 'off') {
         this.runtime.ioDevices.video.disableVideo();
+        this.facemesh.video = null; // Stop the model prediction if video is off
       } else {
-        this.runtime.ioDevices.video.enableVideo();
+        this.runtime.ioDevices.video.enableVideo().then(this.detectFace);
         this.runtime.ioDevices.video.mirror = state === "on";
       }
     }
