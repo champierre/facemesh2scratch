@@ -164,9 +164,9 @@ class Scratch3Facemesh2ScratchBlocks {
               this.faces[index] = {keypoints: face.scaledMesh};
             });
           });
-        }        
+        }
 
-        this.runtime.ioDevices.video.enableVideo().then( this.detectFace)
+        this.runtime.ioDevices.video.enableVideo().then(this.detectFace)
     }
 
     getInfo () {
