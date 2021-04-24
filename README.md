@@ -39,11 +39,13 @@ https://github.com/champierre/facemesh2scratch/raw/master/sample_projects/faceme
 ## 推奨環境
 
 - OS
-  - Windows 8
-  - Windows 10
+  - Windows 8 (TBD)
+  - Windows 10 (TBD)
   - MacOS
-- ブラウザ
+  - iOS
+- Browser
   - Chrome
+  - Safari(iOS)
 
 Chrome の拡張機能を使用している場合に、正常に動作しないことがあるので、もしうまく動かないという場合には、[ゲストモード](https://support.google.com/chrome/answer/6130773?hl=ja)に切り替えてお試しください。
 
