@@ -318,6 +318,7 @@ class Scratch3Facemesh2ScratchBlocks {
         this.runtime.ioDevices.video.disableVideo();
         this.facemesh.video = null; // Stop the model prediction if video is off
       } else {
+        this.facemesh.removeAllListeners('predict');
         this.runtime.ioDevices.video.enableVideo().then(this.detectFace);
         this.runtime.ioDevices.video.mirror = state === "on";
       }
