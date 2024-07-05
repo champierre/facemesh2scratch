@@ -8,7 +8,7 @@ COLLABORATOR=champierre
 EXTENSION_DESCRIPTION="Face Tracking"
 
 cd node_modules/scratch-vm
-npm install ml5 
+npm install ml5@0.12.2
 cd ../../
 
 mkdir -p node_modules/scratch-vm/src/extensions/scratch3_${EXTENSION_ID}
