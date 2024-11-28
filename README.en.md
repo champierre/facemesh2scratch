@@ -29,7 +29,7 @@ https://github.com/champierre/facemesh2scratch/raw/master/sample_projects/faceme
 
 ## Licence
 
-- Facemesh2Scratch is under [AGPL-3.0 license](./LICENSE), open source and freely available to anyone. You can use it at your classes, workshops. Commercial usage is also accepted. If you or your students created something cool using Facemesh2Scratch, please share it on SNS using hashtag #facemesh2scratch or let me know to any of these contacts. Interesting projects will be added to the "Examples of use".
+Facemesh2Scratch is under [AGPL-3.0 license](./LICENSE), open source and freely available to anyone. You can use it at your classes, workshops. Commercial usage is also accepted. If you or your students created something cool using Facemesh2Scratch, please share it on SNS using hashtag #facemesh2scratch or let me know to any of these contacts. Interesting projects will be added to the "Examples of use".
 
 ## Examples of use
 
