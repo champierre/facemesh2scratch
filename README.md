@@ -42,7 +42,7 @@ https://github.com/champierre/facemesh2scratch/raw/master/sample_projects/faceme
 
 ## ライセンス
 
-- Facemesh2Scratchには [BSD 3-Clause License](./LICENSE.md) が適用されます。オープンソースで、誰でも自由に利用できます。授業やワークショップで使用でき、商用利用も認められています。あなたやあなたの生徒さんがFacemesh2Scratchを使用して何か面白いプロジェクトを作成したときは、ぜひハッシュタグ #facemesh2scratch を使用してSNSで共有するか、連絡先までお知らせください。以下の「活用例」に追加させていただきます。
+Facemesh2Scratchには [AGPL-3.0 license](./LICENSE) が適用されます。オープンソースで、誰でも自由に利用できます。授業やワークショップで使用でき、商用利用も認められています。あなたやあなたの生徒さんがFacemesh2Scratchを使用して何か面白いプロジェクトを作成したときは、ぜひハッシュタグ #facemesh2scratch を使用してSNSで共有するか、連絡先までお知らせください。以下の「活用例」に追加させていただきます。
 
 ## 活用例
 
