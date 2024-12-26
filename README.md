@@ -36,7 +36,9 @@ MediaPipeとTensorFlow.jsが提供するfacemeshパッケージを利用して�
 
 ## サンプルプロジェクト
 
-https://github.com/champierre/facemesh2scratch/raw/master/sample_projects/facemesh.sb3
+- 顔の468ヶ所の部位を表示: https://github.com/champierre/facemesh2scratch/raw/master/sample_projects/facemesh.sb3
+- 変数highlightに部位の番号を入れると、その部位だけハイライト表示: https://github.com/champierre/facemesh2scratch/raw/master/sample_projects/highlight.sb3
+
 
 <img src="images/en/sample_project.png" />
 
