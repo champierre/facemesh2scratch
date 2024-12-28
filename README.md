@@ -13,7 +13,7 @@ Facemesh2Scratchは、Webカメラのみでフェイストラッキングがで�
 
   <img src="images/mesh_map.jpg" width="600" />
 
-出典: https://raw.githubusercontent.com/tensorflow/tfjs-models/refs/heads/master/face-landmarks-detection/mesh_map.jpg
+出典: https://github.com/tensorflow/tfjs-models/tree/master/face-landmarks-detection
 
 MediaPipeとTensorFlow.jsが提供するfacemeshパッケージを利用しています。背景にある技術を知りたい方は、"[Face and hand tracking in the browser with MediaPipe and TensorFlow.js](https://blog.tensorflow.org/2020/03/face-and-hand-tracking-in-browser-with-mediapipe-and-tensorflowjs.html)"を参照ください。
 
